@@ -8,6 +8,27 @@ module top(
     output reg [3:0] leds
 );
 
+// reset debouncer 20 ms. Xtal 50 Mhz
+reg [31:0] debouncer_cnt;
+reg prev_rst_n;
+reg rst_n_stable;
+always @ (posedge clk) begin
+    prev_rst_n <= rst_n;
+    if (prev_rst_n != rst_n) begin
+        debouncer_cnt <= 32'b0;
+    end else begin
+        debouncer_cnt <= debouncer_cnt + 32'b1;
+    end
+
+    if (debouncer_cnt == 31'b1_000_000) begin
+        rst_n_stable <= rst_n;
+    end else begin
+        rst_n_stable <= rst_n_stable;
+    end
+end
+
+
+
 //// CPU Specification
 `define XPRLEN 32
 
@@ -59,7 +80,7 @@ wire done;
 
 lb lb_inst(
     .clk (clk),
-    .rst_n (leds[0]),
+    .rst_n (rst_n_stable),
 
     .en (en),
     // value that rd register stores, not the index number of rd register
@@ -107,7 +128,7 @@ rom	rom_inst (
 	);
 
 always @(posedge clk) begin
-    if (!rst_n) begin
+    if (!rst_n_stable) begin
         rom_address <= 8'b0;
     end else begin
         rom_address <= rom_address + 1;
@@ -119,7 +140,7 @@ end
 reg [31:0] clk_cnt;
 
 always @(posedge clk) begin
-    if (!rst_n) begin
+    if (!rst_n_stable) begin
         pc <= 1;
         fsr <= 1;
         clk_cnt <= 32'd0;

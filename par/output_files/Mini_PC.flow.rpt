@@ -1,5 +1,5 @@
 Flow report for Mini_PC
-Sun Jun 30 13:02:01 2024
+Sun Jun 30 14:17:59 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun 30 13:01:56 2024          ;
+; Flow Status                        ; Successful - Sun Jun 30 14:17:53 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; Mini_PC                                        ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE6E22C8                                    ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 920 / 6,272 ( 15 % )                           ;
-;     Total combinational functions  ; 747 / 6,272 ( 12 % )                           ;
-;     Dedicated logic registers      ; 648 / 6,272 ( 10 % )                           ;
-; Total registers                    ; 648                                            ;
+; Total logic elements               ; 960 / 6,272 ( 15 % )                           ;
+;     Total combinational functions  ; 791 / 6,272 ( 13 % )                           ;
+;     Dedicated logic registers      ; 682 / 6,272 ( 11 % )                           ;
+; Total registers                    ; 682                                            ;
 ; Total pins                         ; 6 / 92 ( 7 % )                                 ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 12,288 / 276,480 ( 4 % )                       ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/30/2024 13:00:53 ;
+; Start date & time ; 06/30/2024 14:16:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Mini_PC             ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name ; Section Id       ;
 +-------------------------------------+----------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 123534914086740.171971645308956                          ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 123534914086740.171972100201032                          ; --            ; --          ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                       ; --            ; --          ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                       ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                        ; --            ; --          ; --               ;
@@ -129,11 +129,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 4863 MB             ; 00:00:08                           ;
-; Fitter               ; 00:00:09     ; 1.1                     ; 5495 MB             ; 00:00:03                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4695 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 4777 MB             ; 00:00:00                           ;
-; Total                ; 00:01:02     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 4855 MB             ; 00:00:10                           ;
+; Fitter               ; 00:00:10     ; 1.1                     ; 5495 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4686 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4779 MB             ; 00:00:00                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:00:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

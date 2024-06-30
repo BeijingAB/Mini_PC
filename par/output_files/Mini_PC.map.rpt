@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Mini_PC
-Sun Jun 30 13:01:40 2024
+Sun Jun 30 14:17:35 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -61,15 +61,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 30 13:01:40 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 30 14:17:35 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; Mini_PC                                        ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 941                                            ;
-;     Total combinational functions  ; 745                                            ;
-;     Dedicated logic registers      ; 648                                            ;
-; Total registers                    ; 648                                            ;
+; Total logic elements               ; 986                                            ;
+;     Total combinational functions  ; 789                                            ;
+;     Dedicated logic registers      ; 682                                            ;
+; Total registers                    ; 682                                            ;
 ; Total pins                         ; 6                                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 12,288                                         ;
@@ -259,20 +259,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 941                      ;
+; Estimated Total logic elements              ; 986                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 745                      ;
+; Total combinational functions               ; 789                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 284                      ;
+;     -- 4 input functions                    ; 295                      ;
 ;     -- 3 input functions                    ; 214                      ;
-;     -- <=2 input functions                  ; 247                      ;
+;     -- <=2 input functions                  ; 280                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 597                      ;
-;     -- arithmetic mode                      ; 148                      ;
+;     -- normal mode                          ; 610                      ;
+;     -- arithmetic mode                      ; 179                      ;
 ;                                             ;                          ;
-; Total registers                             ; 648                      ;
-;     -- Dedicated logic registers            ; 648                      ;
+; Total registers                             ; 682                      ;
+;     -- Dedicated logic registers            ; 682                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 6                        ;
@@ -282,8 +282,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 482                      ;
-; Total fan-out                               ; 4870                     ;
-; Average fan-out                             ; 3.40                     ;
+; Total fan-out                               ; 5079                     ;
+; Average fan-out                             ; 3.36                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -292,7 +292,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 745 (54)            ; 648 (41)                  ; 12288       ; 0            ; 0       ; 0         ; 6    ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 789 (98)            ; 682 (75)                  ; 12288       ; 0            ; 0       ; 0         ; 6    ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |lb:lb_inst|                                                                                                                         ; 60 (2)              ; 40 (3)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lb:lb_inst                                                                                                                                                                                                                                                                                                                                 ; lb                                ; work         ;
 ;       |ram:ram_inst|                                                                                                                    ; 58 (0)              ; 37 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lb:lb_inst|ram:ram_inst                                                                                                                                                                                                                                                                                                                    ; ram                               ; work         ;
 ;          |altsyncram:altsyncram_component|                                                                                              ; 58 (0)              ; 37 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                    ; altsyncram                        ; work         ;
@@ -387,10 +387,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 ; Register name                                                                                                                                   ; Reason for Removal                     ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; leds[2]~reg0                                                                                                                                    ; Merged with leds[3]~reg0               ;
+; leds[0]~reg0                                                                                                                                    ; Merged with leds[3]~reg0               ;
+; leds[1]~reg0                                                                                                                                    ; Merged with leds[3]~reg0               ;
 ; lb:lb_inst|done_1                                                                                                                               ; Merged with lb:lb_inst|ram_wren        ;
-; leds[1]~reg0                                                                                                                                    ; Merged with leds[0]~reg0               ;
-; leds[2]~reg0                                                                                                                                    ; Merged with leds[0]~reg0               ;
-; leds[3]~reg0                                                                                                                                    ; Merged with leds[0]~reg0               ;
 ; lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3] ; Stuck at GND due to stuck port data_in ;
 ; rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]            ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 6                                                                                                           ;                                        ;
@@ -402,8 +402,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 648   ;
-; Number of registers using Synchronous Clear  ; 99    ;
+; Total registers                              ; 682   ;
+; Number of registers using Synchronous Clear  ; 131   ;
 ; Number of registers using Synchronous Load   ; 82    ;
 ; Number of registers using Asynchronous Clear ; 265   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -440,17 +440,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_cnt[31]                                                                                                                                                                         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|clk_cnt[26]                                                                                                                                                                         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                           ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                           ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1]            ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]                 ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]                                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                           ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]            ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 52 LEs               ; 16 LEs                 ; Yes        ; |top|lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |top|rom:rom_inst|altsyncram:altsyncram_component|altsyncram_tbe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -760,27 +760,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 65                          ;
-; cycloneiii_ff         ; 118                         ;
+; cycloneiii_ff         ; 152                         ;
 ;     CLR               ; 10                          ;
 ;     ENA               ; 24                          ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 40                          ;
-;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 172                         ;
-;     arith             ; 60                          ;
-;         2 data inputs ; 60                          ;
-;     normal            ; 112                         ;
+;     SCLR              ; 72                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 216                         ;
+;     arith             ; 91                          ;
+;         2 data inputs ; 91                          ;
+;     normal            ; 125                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 12                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 17                          ;
-;         4 data inputs ; 76                          ;
+;         4 data inputs ; 87                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.14                        ;
+; Average LUT depth     ; 2.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -805,8 +805,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; lb:lb_inst|done_1    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; lb:lb_inst|ram_wren                 ; N/A     ;
 ; lb:lb_inst|done_2    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; lb:lb_inst|done_2                   ; N/A     ;
 ; lb:lb_inst|done_2    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; lb:lb_inst|done_2                   ; N/A     ;
-; leds[0]~reg0         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; leds[0]~reg0                        ; N/A     ;
-; leds[0]~reg0         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; leds[0]~reg0                        ; N/A     ;
+; lb:lb_inst|rst_n     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; rst_n_stable                        ; N/A     ;
+; lb:lb_inst|rst_n     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; rst_n_stable                        ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
@@ -822,8 +822,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
-; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
+; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
 ; auto_signaltap_0|vcc ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC ; N/A     ;
@@ -848,7 +848,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sun Jun 30 13:00:52 2024
+    Info: Processing started: Sun Jun 30 14:16:42 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Mini_PC -c Mini_PC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -861,11 +861,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: rom File: C:/Users/PC/Documents/git/Mini_PC/ip/rom/rom.v Line: 40
 Warning (10236): Verilog HDL Implicit Net warning at lb.v(58): created implicit net for "ram_data" File: C:/Users/PC/Documents/git/Mini_PC/rtl/lb.v Line: 58
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.v(14): object "x0" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 14
-Warning (10036): Verilog HDL or VHDL warning at top.v(26): object "pc" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 26
-Warning (10036): Verilog HDL or VHDL warning at top.v(27): object "fsr" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 27
-Warning (10230): Verilog HDL assignment warning at top.v(113): truncated value with size 32 to match size of target (8) File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 113
-Info (12128): Elaborating entity "lb" for hierarchy "lb:lb_inst" File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 72
+Warning (10036): Verilog HDL or VHDL warning at top.v(35): object "x0" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 35
+Warning (10036): Verilog HDL or VHDL warning at top.v(47): object "pc" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 47
+Warning (10036): Verilog HDL or VHDL warning at top.v(48): object "fsr" assigned a value but never read File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 48
+Warning (10230): Verilog HDL assignment warning at top.v(134): truncated value with size 32 to match size of target (8) File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 134
+Info (12128): Elaborating entity "lb" for hierarchy "lb:lb_inst" File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 93
 Warning (10230): Verilog HDL assignment warning at lb.v(43): truncated value with size 32 to match size of target (8) File: C:/Users/PC/Documents/git/Mini_PC/rtl/lb.v Line: 43
 Info (12128): Elaborating entity "ram" for hierarchy "lb:lb_inst|ram:ram_inst" File: C:/Users/PC/Documents/git/Mini_PC/rtl/lb.v Line: 61
 Info (12128): Elaborating entity "altsyncram" for hierarchy "lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component" File: C:/Users/PC/Documents/git/Mini_PC/ip/ram/ram.v Line: 86
@@ -908,7 +908,7 @@ Info (12133): Instantiated megafunction "lb:lb_inst|ram:ram_inst|altsyncram:alts
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
 Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "lb:lb_inst|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_00l1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 828
-Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 107
+Info (12128): Elaborating entity "rom" for hierarchy "rom:rom_inst" File: C:/Users/PC/Documents/git/Mini_PC/rtl/top.v Line: 128
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/PC/Documents/git/Mini_PC/ip/rom/rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "rom:rom_inst|altsyncram:altsyncram_component" File: C:/Users/PC/Documents/git/Mini_PC/ip/rom/rom.v Line: 82
 Info (12133): Instantiated megafunction "rom:rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/PC/Documents/git/Mini_PC/ip/rom/rom.v Line: 82
@@ -966,7 +966,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: C:/Users/PC/Documents/git/Mini_PC/par/db/cmpr_ngc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.06.30.13:01:22 Progress: Loading sldfd82dfe4/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.06.30.14:17:15 Progress: Loading sldfd82dfe4/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -994,15 +994,15 @@ Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 41 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 989 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1034 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 958 logic cells
+    Info (21061): Implemented 1003 logic cells
     Info (21064): Implemented 20 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Sun Jun 30 13:01:40 2024
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Sun Jun 30 14:17:35 2024
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:00:10
 
 

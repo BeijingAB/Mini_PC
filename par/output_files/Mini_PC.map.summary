@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Jun 30 13:01:40 2024
+Analysis & Synthesis Status : Successful - Sun Jun 30 14:17:35 2024
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Mini_PC
 Top-level Entity Name : top
 Family : Cyclone IV E
-Total logic elements : 941
-    Total combinational functions : 745
-    Dedicated logic registers : 648
-Total registers : 648
+Total logic elements : 986
+    Total combinational functions : 789
+    Dedicated logic registers : 682
+Total registers : 682
 Total pins : 6
 Total virtual pins : 0
 Total memory bits : 12,288

@@ -1,0 +1,79 @@
+//// Instruction specification
+
+// Memory Instruction
+
+// LB
+
+/* Load 8 bit from memory to register
+
+    31 - 27: rd is index number of x register
+    26 - 22: rs1 register value points to the base address
+    21 - 17: imm[11:7]
+    16 - 10: imm[6:0], imm to add the value that rs1 points to
+    9  -  7: funct 3
+    6  -  0: opcode
+
+*/
+`define XPRLEN 32
+
+`define OPCODE_MEMORY 7'b000_0011
+
+`define FUNCT3_LB 3'b000
+`define FUNCT3_LH 3'b001
+`define FUNCT3_LW 3'b010
+`define FUNCT3_LD 3'b011
+`define FUNCT3_LBU 3'b100
+`define FUNCT3_LHU 3'b101
+`define FUNCT3_LWU 3'b110
+
+module lb(
+    input clk,
+    input rst_n,
+
+    input en,
+    // value that rd register stores, not the index number of rd register
+    input [`XPRLEN-1:0] rd_value,
+    input [11:7] imm1,
+    input [6:0] imm2,
+    // value that rs1 register stores, not the index number of rs1 register
+    output [`XPRLEN-1:0] rs1_value,
+    output reg done
+);
+// lw related signals
+wire [7:0] ram_address = rd_value + {imm1, imm2};
+reg	ram_wren;
+wire [7:0] ram_q;
+
+// need use macro, hard coding there
+assign rs1_value = ram_q;
+
+// load done signal
+reg done_1;
+reg done_2;
+wire done_high;
+
+ram ram_inst (
+	.address ( ram_address ),
+	.clock ( clk ),
+	.data ( ram_data ),
+	.wren ( ram_wren ),
+	.q ( ram_q )
+	);
+
+always @ (posedge clk) begin
+    if (~rst_n | ~en) begin
+        done_1 <= 1'b0;
+        done_2 <= 1'b0;
+        done <= 1'b0;
+        ram_wren <= 1'b0;
+
+    end else begin
+        // delay done signal
+        done_1 <= 1'b1;
+        done_2 <= done_1;
+        done <= done_2;
+        ram_wren <= 1'b1;
+    end
+end
+
+endmodule
